@@ -1,0 +1,352 @@
+/*
+ * Default styles for all elements
+ */
+ * {
+    text-decoration: none;
+}
+
+/* 
+ * *  
+we can provide our background colour to our entire website using the background tag inside the body tag
+background:colorname;
+we can directly provide the main text colour of our website using the colour tag inside the body tag
+color:colourname;
+ */
+body {
+    background: rgb(4, 80, 67);
+    color: #adb1b0;
+}
+
+header {
+    background: rgb(4, 80, 67);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.logo {
+    color: #adb1b0;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.navbar a {
+    color: #adb1b0;
+    font-size: 1.5rem;
+    margin-left: 4rem;
+}
+
+.navbar a:hover {
+    color: #0ef;
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 15% 2rem;
+ /* the 5rem is for the up and down purpose the 1rem is for the right side and the 2rem is for the left side */
+ /* border-style: solid;
+ border-color: darkred; */
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    color: #0ef;
+}
+
+.home-image img {
+    width: 20vw;
+}
+
+.home-content h3 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.home-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 0.3;
+}
+
+.home-content p {
+    font-size: 2rem;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: 0.2rem solid #0ef;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #0ef;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.5s ease;
+}
+
+.social-media a:hover {
+    background: #0ef;
+    color: #070807; /* Adjusted color value */
+    box-shadow: 0 0 1rem #0ef;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #0ef;
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem #0ef;
+    font-size: 1rem;
+    color: #070807; /* Adjusted color value */
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.5s ease;
+}
+
+.btn:hover {
+    box-shadow: none; /* Removes shadow on hover */
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: rgb(4, 80, 67);
+}
+
+.about-image img {
+    width: 20vw;
+}
+
+.heading {
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 0.2;
+}
+
+.about-content h3 {
+    font-size: 2.5rem;
+}
+
+.about-content p {
+    font-size: 1.5rem;
+    margin: 2rem 0 3rem;
+}
+
+.services h2{
+    margin-bottom: 5rem
+}
+.service-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.service-container .service-box{
+    background-color: #323946;
+    padding: 3rem 2rem 4rem;
+    flex: 1 1;
+    text-align: center;
+    border-radius: 2rem;
+    border: .5rem solid #323946;
+    transition: .5s ease;
+}
+.service-container .service-box:hover{
+    border-color:#0ef ;
+    transform: scale(1.05);
+}
+.service-box i{
+    font-size: 3rem;
+    color: #0ef;
+}
+.service-box h3{
+    font-size:2rem ;
+}
+.service-box p{
+    font-size: 1.5rem;
+    margin: 1rem 0 3rem;
+}
+.my-recent-works{
+    background-color: rgb(4, 80, 67);
+
+}
+.my-recent-works h2{
+    font-size: 4rem;
+}
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+
+}
+.project-container .project-box{
+    /* if we want to take some element and try to put it on a different element such that the second element looks like its sitting on the first element
+     to do this we use the property of position relative and absolute
+    */
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem #323946;
+    border: .2rem solid #323946;
+    overflow: hidden;
+    display: flex;
+    transition: .5s ease;
+
+
+}
+.project-box img{
+    width: 100%;
+}
+.project-box .project-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,.4)) 
+}
+.project-container .project-box:hover{
+    border-color: #0ef;
+    transform: scale(1.05);
+}
+project-box img{
+    width: 100%;
+    transition: .5s ease;
+}
+.project-box:hover img{
+    transform: scale(1.1);
+}
+.project-box .project-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,.1),#0ef);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 0;
+    /* to use the animation effect we use the property of translateY
+    transform: translateY(100%); this property helps us to hide the content of the file
+    transform: translateY(0); this property when applied with the hover effect will show the content
+    in this way we can provide the animation effect
+    */
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+.project-box:hover .project-layer{
+    transform: translateY(0);
+}
+.project-layer h4{
+    font-size: 2rem;
+}
+.project-layer p{
+    font-size: 1rem;
+    margin: .3rem 0 1rem;
+}
+.project-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: #fff;
+    border-radius: 50%;
+}
+.project-box a i{
+    font-size: 2rem;
+    color: #323946;
+}
+/* .project-container .project-box:hover{
+    border-color: #0ef;
+    transform: scale(1.05);
+
+} */
+.contact h2{
+    margin-bottom: 4rem;
+ }
+ .contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+ }
+ .contact form .input-box{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+ }
+ .contact form .input-box input,
+ .contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    color: #fff;
+    background: #323946;
+    border-radius: 0.8rem;
+    margin: .8rem 0;
+
+ }
+ .contact form .input-box input{
+    width: 45%;
+
+ }
+ .contact form textarea{
+    resize: none;
+ }
+ .contact form .btn{
+    margin-top: 2rem;
+    cursor: pointer;
+ }
+ .footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #323946;
+    padding: 1rem 5%;
+    
+ }
+ .footer-text{
+   font-size: 1.5rem ;
+ }
+ .footer-iconTop a{
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   padding: 1rem;
+   background: #0ef;
+   border-radius: 1rem;
+   transition: .5s ease;
+
+ }
+.footer-iconTop a i{
+    font-size: 2rem;
+    color: #1f242d;
+}
+.footer-iconTop a:hover{
+    box-shadow: 0 0 1rem #0ef;
+    
+}
+
+
+ 
